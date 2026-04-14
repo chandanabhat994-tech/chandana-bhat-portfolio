@@ -1,16 +1,106 @@
-# React + Vite
+# 🌐 Chandana Bhat – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and interactive portfolio website built to showcase my projects, skills, and experience in web development and AI/ML.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Website
 
-## React Compiler
+👉 https://chandana-bhat-portfolio.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🔥 Modern UI/UX design
+* 📱 Fully responsive (mobile + desktop)
+* 🎨 Smooth animations using Framer Motion
+* 💼 Projects showcase section
+* 🧠 Skills section with icons
+* 📄 Resume download option
+* 🔗 Social links (LinkedIn, GitHub)
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ React (Vite)
+* 🎨 Tailwind CSS
+* 🎞️ Framer Motion
+* 🌐 Vercel (Deployment)
+
+---
+
+## 📁 Project Structure
+
+```
+MyPortfolio/
+│── public/
+│   ├── profile.jpeg
+│   ├── about1.jpg
+│   ├── about2.jpg
+│   ├── about3.jpg
+│   ├── about4.jpg
+│   ├── Chandana_Bhat_Resume.pdf
+│
+│── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│
+│── package.json
+│── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```
+git clone https://github.com/chandanabhat994-tech/chandana-bhat-portfolio.git
+```
+
+Navigate to the project:
+
+```
+cd chandana-bhat-portfolio
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run the project:
+
+```
+npm run dev
+```
+
+---
+
+## 🚀 Deployment
+
+Deployed using **Vercel**
+
+Any changes pushed to GitHub are automatically deployed.
+
+---
+
+## 📬 Contact
+
+* 💼 LinkedIn: https://www.linkedin.com/in/chandana-bhat994
+* 💻 GitHub: https://github.com/chandanabhat994-tech
+
+---
+
+## ⭐ Acknowledgement
+
+This portfolio is built as part of my learning journey and to showcase my work to recruiters and collaborators.
+
+---
+
+### ⭐ If you like this project, give it a star!
