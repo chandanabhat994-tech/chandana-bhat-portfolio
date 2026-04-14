@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 function App() {
   const linkedinUrl = "https://www.linkedin.com/in/chandana-bhat994";
   const githubUrl = "https://github.com/chandanabhat994-tech";
-  const resumeUrl = "/resume.pdf";
+  const resumeUrl = "/Chandana_Bhat_Resume.pdf";
 
   const services = [
     {
