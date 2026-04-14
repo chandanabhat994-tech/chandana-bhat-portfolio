@@ -20,39 +20,42 @@ function App() {
   const githubUrl = "https://github.com/chandanabhat994-tech";
   const resumeUrl = "/Chandana_Bhat_Resume.pdf";
 
-  const services = [
+  const interests = [
     {
       icon: <FaCode />,
       title: "Web Development",
-      desc: "Building responsive and modern websites with clean design and smooth user experience.",
+      desc: "I enjoy building responsive and visually appealing websites with clean layouts and smooth interaction.",
     },
     {
       icon: <FaLaptopCode />,
-      title: "AI / ML Projects",
-      desc: "Creating practical machine learning and data-driven projects with real-world use cases.",
+      title: "Artificial Intelligence / Machine Learning",
+      desc: "I am interested in creating practical AI and ML projects that solve real-world problems using data.",
     },
     {
       icon: <FaPalette />,
       title: "UI / UX Design",
-      desc: "Designing attractive interfaces that are simple to use and visually impressive.",
+      desc: "I like exploring elegant interfaces, soft visual themes, and user-friendly digital experiences.",
     },
   ];
 
   const projects = [
     {
       title: "Food Security Pattern Analyzer",
-      desc: "A machine learning based project for analyzing agricultural and food security patterns.",
+      desc: "A machine learning project focused on analyzing agricultural data and predicting food security patterns.",
       link: "#",
+      tag: "Machine Learning",
     },
     {
       title: "Enhancing Network Security",
-      desc: "A project focused on improving network protection, monitoring, and security mechanisms.",
+      desc: "A project centered on strengthening network protection, monitoring suspicious activity, and improving security.",
       link: "#",
+      tag: "Cyber Security",
     },
     {
       title: "Portfolio Website",
-      desc: "A personal interactive portfolio website with modern UI, animations, and responsive layout.",
-      link: "#",
+      desc: "A modern portfolio website built with React to showcase projects, skills, and professional identity.",
+      link: "https://github.com/chandanabhat994-tech/chandana-bhat-portfolio",
+      tag: "Frontend",
     },
   ];
 
@@ -68,97 +71,87 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0b0b16] text-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#fff9fc] via-[#fdf5ff] to-[#fff2f8] text-[#4b2e46]">
       {/* Navbar */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-[#0b0b16]/80 border-b border-orange-500/10">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-[#f0d6e7]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-orange-400">Chandana.</h1>
+          <h1 className="text-2xl font-bold tracking-wide text-[#c36aa3]">
+            Chandana
+          </h1>
 
-          <nav className="hidden md:flex gap-8 text-sm text-gray-300">
-            <a href="#home" className="hover:text-orange-400 transition">
-              Home
-            </a>
-            <a href="#services" className="hover:text-orange-400 transition">
-              Services
-            </a>
-            <a href="#about" className="hover:text-orange-400 transition">
-              About
-            </a>
-            <a href="#skills" className="hover:text-orange-400 transition">
-              Skills
-            </a>
-            <a href="#projects" className="hover:text-orange-400 transition">
-              Projects
-            </a>
-            <a href="#contact" className="hover:text-orange-400 transition">
-              Contact
-            </a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#6f5468]">
+            <a href="#home" className="hover:text-[#c36aa3] transition">Home</a>
+            <a href="#about" className="hover:text-[#c36aa3] transition">About</a>
+            <a href="#interests" className="hover:text-[#c36aa3] transition">Interests</a>
+            <a href="#skills" className="hover:text-[#c36aa3] transition">Skills</a>
+            <a href="#projects" className="hover:text-[#c36aa3] transition">Projects</a>
+            <a href="#contact" className="hover:text-[#c36aa3] transition">Contact</a>
           </nav>
 
           <a
-            href="#contact"
-            className="hidden md:inline-block bg-orange-500 hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition px-5 py-2 rounded-full font-medium"
+            href={resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#e7a9c8] to-[#ccb0ff] text-white font-medium shadow-md hover:scale-105 transition"
           >
-            Let&apos;s Talk
+            <FaFileAlt />
+            Resume
           </a>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section
-        id="home"
-        className="relative overflow-hidden bg-gradient-to-br from-[#0e1020] via-[#1a1020] to-[#4a1808]"
-      >
-        <div className="absolute top-0 left-0 w-72 h-72 bg-orange-500/20 blur-3xl rounded-full"></div>
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-600/20 blur-3xl rounded-full"></div>
+      {/* Hero */}
+      <section id="home" className="relative overflow-hidden">
+        <div className="absolute -top-10 -left-10 w-80 h-80 bg-[#f8bfd8]/40 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#d9c5ff]/45 blur-3xl rounded-full"></div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 grid md:grid-cols-2 gap-14 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, x: -45 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-orange-400 font-semibold mb-3">Hello There 👋</p>
+            <p className="text-[#c36aa3] font-semibold mb-3 text-lg">
+              Hello there 👋
+            </p>
 
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
-              Hi, I&apos;m <span className="text-orange-400">Chandana Bhat</span>
-            </h2>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#472c43] mb-5">
+              I'm <span className="text-[#ae67d8]">Chandana Bhat</span>
+            </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-5">
+            <p className="text-xl md:text-2xl text-[#7c5f75] mb-6">
               Aspiring Developer & AI/ML Enthusiast
             </p>
 
-            <p className="text-gray-400 leading-7 max-w-xl mb-8">
-              I build attractive, interactive, and recruiter-friendly digital
-              experiences. I enjoy creating web projects, AI-based solutions,
-              and portfolios that are both modern and practical.
+            <p className="text-[#6f5468] leading-8 max-w-2xl mb-8">
+              I create elegant digital experiences with a strong focus on clean
+              design, thoughtful interaction, and meaningful technical work. I
+              enjoy combining web development with AI/ML to build projects that
+              are visually appealing and practically useful.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4 mb-7">
+              <a
+                href="#projects"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#e7a9c8] to-[#ccb0ff] text-white font-semibold shadow-md hover:scale-105 transition"
+              >
+                View Projects
+              </a>
+
               <a
                 href="#contact"
-                className="bg-orange-500 hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition px-6 py-3 rounded-full font-semibold"
+                className="px-6 py-3 rounded-full border border-[#dfb7cf] bg-white/80 text-[#b05a92] font-semibold shadow-sm hover:bg-[#fff0f8] transition"
               >
                 Contact Me
               </a>
-
-              <a
-                href={resumeUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="border border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-white hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition px-6 py-3 rounded-full font-semibold flex items-center gap-2"
-              >
-                <FaFileAlt />
-                Resume
-              </a>
             </div>
 
-            <div className="flex gap-5 text-2xl">
+            <div className="flex items-center gap-4">
               <a
                 href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="w-12 h-12 rounded-full bg-white/5 border border-orange-500/20 flex items-center justify-center hover:text-orange-400 hover:border-orange-400 hover:shadow-[0_0_18px_rgba(249,115,22,0.35)] transition"
+                className="w-12 h-12 rounded-full bg-white border border-[#efd6e6] flex items-center justify-center text-[#b05a92] shadow-sm hover:text-[#9f4edf] hover:scale-110 transition"
               >
                 <FaLinkedin />
               </a>
@@ -167,7 +160,7 @@ function App() {
                 href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="w-12 h-12 rounded-full bg-white/5 border border-orange-500/20 flex items-center justify-center hover:text-orange-400 hover:border-orange-400 hover:shadow-[0_0_18px_rgba(249,115,22,0.35)] transition"
+                className="w-12 h-12 rounded-full bg-white border border-[#efd6e6] flex items-center justify-center text-[#b05a92] shadow-sm hover:text-[#9f4edf] hover:scale-110 transition"
               >
                 <FaGithub />
               </a>
@@ -176,7 +169,7 @@ function App() {
                 href={resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="w-12 h-12 rounded-full bg-white/5 border border-orange-500/20 flex items-center justify-center hover:text-orange-400 hover:border-orange-400 hover:shadow-[0_0_18px_rgba(249,115,22,0.35)] transition"
+                className="w-12 h-12 rounded-full bg-white border border-[#efd6e6] flex items-center justify-center text-[#b05a92] shadow-sm hover:text-[#9f4edf] hover:scale-110 transition"
               >
                 <FaFileAlt />
               </a>
@@ -184,19 +177,18 @@ function App() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 45 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="relative">
-              <div className="absolute inset-0 blur-3xl bg-orange-500/30 rounded-full scale-110"></div>
-
-              <div className="relative bg-orange-500 rounded-[40px] p-4 shadow-[0_0_80px_rgba(249,115,22,0.45)] hover:shadow-[0_0_120px_rgba(249,115,22,0.6)] transition">
+            <div className="relative w-full max-w-sm">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#f5bfd7] to-[#d7c4ff] blur-3xl opacity-60 rounded-[40px]"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm border border-white/70 rounded-[38px] p-4 shadow-[0_24px_60px_rgba(210,165,197,0.35)]">
                 <img
                   src="/profile.jpeg"
                   alt="Profile"
-                  className="w-[280px] md:w-[320px] h-[360px] md:h-[400px] object-cover rounded-[30px]"
+                  className="w-full h-[400px] object-cover rounded-[28px]"
                 />
               </div>
             </div>
@@ -204,138 +196,113 @@ function App() {
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="py-20 px-6 md:px-10 bg-[#0e0f1b]">
+      {/* About */}
+      <section id="about" className="py-20 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-[#c36aa3] font-semibold mb-3">About Me</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#472c43] mb-6">
+              A creative and curious builder with a strong interest in technology
+            </h2>
+
+            <p className="text-[#6f5468] leading-8 mb-5">
+              I am Chandana Bhat, a fresher passionate about web development,
+              machine learning, and creating projects that are both visually
+              appealing and technically meaningful.
+            </p>
+
+            <p className="text-[#6f5468] leading-8 mb-8">
+              I enjoy transforming ideas into clean and interactive digital
+              experiences. My focus is on building a portfolio that reflects not
+              only my technical skills but also my sense of design and
+              presentation.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="rounded-3xl bg-white/85 border border-[#efd8ea] p-5 shadow-sm">
+                <h3 className="text-[#c36aa3] font-semibold mb-2">Frontend</h3>
+                <p className="text-[#6f5468] text-sm">
+                  HTML, CSS, JavaScript, React
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-white/85 border border-[#efd8ea] p-5 shadow-sm">
+                <h3 className="text-[#c36aa3] font-semibold mb-2">Backend / Logic</h3>
+                <p className="text-[#6f5468] text-sm">
+                  Python, Java, Machine Learning
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-48 md:h-56">
+              <img src="/about1.jpg" alt="About 1" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+            </div>
+            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-60 md:h-72 mt-6">
+              <img src="/about2.jpg" alt="About 2" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+            </div>
+            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-60 md:h-72 -mt-6">
+              <img src="/about3.jpg" alt="About 3" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+            </div>
+            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-48 md:h-56">
+              <img src="/about4.jpg" alt="About 4" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Interests */}
+      <section id="interests" className="py-20 px-6 md:px-10 bg-white/45">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-3">
-            My <span className="text-orange-400">Services</span>
-          </h2>
-          <p className="text-gray-400 text-center mb-12">
-            Areas where I can build, design, and contribute effectively.
-          </p>
+          <div className="text-center mb-12">
+            <p className="text-[#c36aa3] font-semibold mb-2">Interests</p>
+            <h2 className="text-4xl font-bold text-[#472c43]">
+              What I Love Exploring
+            </h2>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {interests.map((service, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-white/5 border border-orange-500/10 hover:border-orange-400/40 hover:shadow-[0_0_25px_rgba(249,115,22,0.25)] transition rounded-3xl p-7 shadow-lg"
+                className="rounded-3xl bg-white/90 border border-[#efd8ea] p-6 text-center shadow-[0_15px_35px_rgba(231,191,214,0.2)] hover:shadow-[0_20px_45px_rgba(203,163,255,0.25)] transition"
               >
-                <div className="w-14 h-14 rounded-2xl bg-orange-500/15 text-orange-400 flex items-center justify-center text-2xl mb-5">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-r from-[#e7a9c8] to-[#ccb0ff] text-white flex items-center justify-center text-2xl shadow-sm">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-400 leading-7">{service.desc}</p>
+
+                <h3 className="text-xl font-semibold text-[#472c43] mb-3">
+                  {service.title}
+                </h3>
+
+                <p className="text-[#6f5468] text-sm leading-6">
+                  {service.desc}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section
-        id="about"
-        className="py-20 px-6 md:px-10 bg-gradient-to-br from-[#121426] to-[#26130c]"
-      >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="h-40 w-full overflow-hidden rounded-3xl border border-orange-500/10">
-              <img
-                src="/about1.jpg"
-                alt="About 1"
-                className="h-full w-full object-cover hover:scale-105 transition duration-300"
-              />
-            </div>
-
-            <div className="h-40 w-full overflow-hidden rounded-3xl border border-orange-500/10">
-              <img
-                src="/about2.jpg"
-                alt="About 2"
-                className="h-full w-full object-cover hover:scale-105 transition duration-300"
-              />
-            </div>
-
-            <div className="h-40 w-full overflow-hidden rounded-3xl border border-orange-500/10">
-              <img
-                src="/about3.jpg"
-                alt="About 3"
-                className="h-full w-full object-cover hover:scale-105 transition duration-300"
-              />
-            </div>
-
-            <div className="h-40 w-full overflow-hidden rounded-3xl border border-orange-500/10">
-              <img
-                src="/about4.jpg"
-                alt="About 4"
-                className="h-full w-full object-cover hover:scale-105 transition duration-300"
-              />
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-4xl font-bold mb-5">
-              About <span className="text-orange-400">Me</span>
-            </h2>
-
-            <p className="text-gray-400 leading-8 mb-5">
-              I am Chandana Bhat, a passionate fresher interested in web
-              development, machine learning, and building projects that are both
-              visually strong and technically meaningful.
-            </p>
-
-            <p className="text-gray-400 leading-8 mb-8">
-              I enjoy turning ideas into interactive digital products. My focus
-              is on clean design, good user experience, and projects that help
-              me stand out professionally.
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              <div className="rounded-2xl bg-white/5 border border-orange-500/10 p-4">
-                <h3 className="text-orange-400 font-semibold mb-2">Frontend</h3>
-                <p className="text-gray-400 text-sm">
-                  HTML, CSS, JavaScript, React
-                </p>
-              </div>
-
-              <div className="rounded-2xl bg-white/5 border border-orange-500/10 p-4">
-                <h3 className="text-orange-400 font-semibold mb-2">
-                  Backend / Logic
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  Python, Java, Machine Learning
-                </p>
-              </div>
-            </div>
-
-            <a
-              href="#projects"
-              className="inline-block bg-orange-500 hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition px-6 py-3 rounded-full font-semibold"
-            >
-              View Projects
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Skills */}
-      <section id="skills" className="py-20 px-6 md:px-10 bg-[#0e0f1b]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-3">
-            My <span className="text-orange-400">Skills</span>
+      <section id="skills" className="py-20 px-6 md:px-10">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-[#c36aa3] font-semibold mb-2">Skills</p>
+          <h2 className="text-4xl font-bold text-[#472c43] mb-10">
+            Tools I Work With
           </h2>
-          <p className="text-gray-400 text-center mb-12">
-            Technologies and tools I use to build projects and solve problems.
-          </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -6, scale: 1.03 }}
-                className="bg-white/5 border border-orange-500/10 hover:border-orange-400/40 hover:shadow-[0_0_25px_rgba(249,115,22,0.25)] rounded-3xl p-6 flex flex-col items-center justify-center text-center transition"
+                whileHover={{ scale: 1.05 }}
+                className="px-5 py-4 rounded-full bg-white/85 border border-[#efd8ea] shadow-sm flex items-center gap-3 text-[#5d3d59]"
               >
-                <div className="text-4xl text-orange-400 mb-4">{skill.icon}</div>
-                <h3 className="text-lg font-semibold">{skill.name}</h3>
+                <span className="text-[#c36aa3] text-xl">{skill.icon}</span>
+                <span className="font-medium">{skill.name}</span>
               </motion.div>
             ))}
           </div>
@@ -343,29 +310,39 @@ function App() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="py-20 px-6 md:px-10 bg-[#0d0e18]">
+      <section id="projects" className="py-20 px-6 md:px-10 bg-white/45">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-3">
-            My <span className="text-orange-400">Projects</span>
-          </h2>
-          <p className="text-gray-400 text-center mb-12">
-            A few projects that reflect my skills and interests.
-          </p>
+          <div className="text-center mb-12">
+            <p className="text-[#c36aa3] font-semibold mb-2">Projects</p>
+            <h2 className="text-4xl font-bold text-[#472c43]">
+              Featured Work
+            </h2>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -10 }}
-                className="rounded-3xl p-7 bg-white/5 border border-orange-500/10 hover:border-orange-400/40 hover:shadow-[0_0_25px_rgba(249,115,22,0.25)] transition shadow-lg"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="rounded-3xl bg-white/90 border border-[#efd8ea] p-6 shadow-[0_15px_35px_rgba(231,191,214,0.2)] hover:shadow-[0_20px_45px_rgba(203,163,255,0.25)] transition"
               >
-                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-gray-400 leading-7 mb-5">{project.desc}</p>
+                <span className="inline-block mb-3 px-3 py-1 rounded-full bg-[#fff0f8] text-[#b05a92] text-xs font-medium border border-[#f2d9e8]">
+                  {project.tag}
+                </span>
+
+                <h3 className="text-xl font-semibold text-[#472c43] mb-3">
+                  {project.title}
+                </h3>
+
+                <p className="text-[#6f5468] text-sm leading-6 mb-5">
+                  {project.desc}
+                </p>
+
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-orange-400 inline-flex items-center gap-2 hover:text-orange-300"
+                  className="inline-flex items-center gap-2 text-[#b05a92] font-medium hover:text-[#9f4edf] transition"
                 >
                   View Project <FaExternalLinkAlt size={14} />
                 </a>
@@ -376,47 +353,46 @@ function App() {
       </section>
 
       {/* Contact */}
-      <section
-        id="contact"
-        className="py-20 px-6 md:px-10 bg-gradient-to-br from-[#1a1020] to-[#4a1808]"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Get In <span className="text-orange-400">Touch</span>
-          </h2>
+      <section id="contact" className="py-20 px-6 md:px-10">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-[36px] bg-white/85 border border-[#efd8ea] shadow-[0_24px_60px_rgba(231,191,214,0.24)] p-10 md:p-14 text-center">
+            <p className="text-[#c36aa3] font-semibold mb-2">Contact</p>
+            <h2 className="text-4xl font-bold text-[#472c43] mb-4">
+              Let&apos;s build something beautiful
+            </h2>
+            <p className="text-[#6f5468] leading-8 mb-8">
+              I&apos;m open to internships, entry-level roles, collaborations,
+              and exciting opportunities where I can learn, contribute, and grow.
+            </p>
 
-          <p className="text-gray-300 leading-8 mb-8">
-            I&apos;m open to internships, entry-level opportunities, and exciting
-            collaborative projects.
-          </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="px-6 py-3 rounded-full bg-[#fff6fb] border border-[#efd8ea] text-[#b05a92] font-medium shadow-sm hover:bg-[#fdebf6] transition"
+              >
+                LinkedIn
+              </a>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white/5 border border-orange-500/20 hover:border-orange-400 hover:shadow-[0_0_20px_rgba(249,115,22,0.25)] px-6 py-3 rounded-full transition"
-            >
-              LinkedIn
-            </a>
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="px-6 py-3 rounded-full bg-[#fff6fb] border border-[#efd8ea] text-[#b05a92] font-medium shadow-sm hover:bg-[#fdebf6] transition"
+              >
+                GitHub
+              </a>
 
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white/5 border border-orange-500/20 hover:border-orange-400 hover:shadow-[0_0_20px_rgba(249,115,22,0.25)] px-6 py-3 rounded-full transition"
-            >
-              GitHub
-            </a>
-
-            <a
-              href={resumeUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-orange-500 hover:bg-orange-600 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] px-6 py-3 rounded-full transition font-semibold"
-            >
-              View Resume
-            </a>
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#e7a9c8] to-[#ccb0ff] text-white font-semibold shadow-md hover:scale-105 transition"
+              >
+                View Resume
+              </a>
+            </div>
           </div>
         </div>
       </section>
