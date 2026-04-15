@@ -234,21 +234,26 @@ function App() {
               </div>
             </div>
           </div>
+          
+          <div className="grid grid-cols-2 gap-4 auto-rows-[220px]">
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-48 md:h-56">
-              <img src="/about1.jpg" alt="About 1" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
-            </div>
-            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-60 md:h-72 mt-6">
-              <img src="/about2.jpg" alt="About 2" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
-            </div>
-            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-60 md:h-72 -mt-6">
-              <img src="/about3.jpg" alt="About 3" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
-            </div>
-            <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-48 md:h-56">
-              <img src="/about4.jpg" alt="About 4" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
-            </div>
-          </div>
+  <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-full">
+    <img src="/about1.jpg" alt="About 1" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+  </div>
+
+  <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-full">
+    <img src="/about2.jpg" alt="About 2" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+  </div>
+
+  <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-full">
+    <img src="/about3.jpg" alt="About 3" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+  </div>
+
+  <div className="rounded-[30px] overflow-hidden border border-[#efd8ea] bg-white shadow-md h-full">
+    <img src="/about4.jpg" alt="About 4" className="w-full h-full object-cover hover:scale-105 transition duration-300" />
+  </div>
+
+</div>
         </div>
       </section>
 
